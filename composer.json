@@ -1,0 +1,51 @@
+{
+    "name": "ahmetaksoy/hyperquest",
+    "description": "Base Request Class with DB logging",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Ahmet Aksoy",
+            "email": "ahmetaksoy@ahmetaksoy.gen.tr"
+        }
+    ],
+    "homepage": "https://github.com/ahmetaksoy/hyperquest",
+    "keywords": [
+        "Laravel",
+        "HyperQuest"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-openssl": "*",
+        "illuminate/encryption": "^6.0",
+        "illuminate/support": "~5|~6",
+        "guzzlehttp/guzzle": "~6.0",
+        "ahmetaksoy/haserrors": "dev-main",
+        "ahmetaksoy/custom-logger": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AhmetAksoy\\HyperQuest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AhmetAksoy\\HyperQuest\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AhmetAksoy\\HyperQuest\\HyperQuestServiceProvider"
+            ],
+            "aliases": {
+                "HyperQuest": "AhmetAksoy\\HyperQuest\\Facades\\HyperQuest"
+            }
+        }
+    }
+}
